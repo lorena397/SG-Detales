@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SG Detalles — Catálogo Floral y Detalles Personalizados</title>
+  <meta
+    name="description"
+    content="Ramos que celebran lo cotidiano. Flores de temporada y detalles personalizados hechos a mano en nuestro pequeño taller de Cochabamba."
+  />
+  <!-- Tipografías Google Fonts limpias y elegantes acordes al diseño de Figma -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ================= ENCABEZADO ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-logo" aria-label="SG Detalles - Inicio">
+        <span class="brand-icon" aria-hidden="true">
+          <img src="assets/logo.svg" alt="" width="40" height="40" />
+        </span>
+        <span class="brand-text">
+          <strong class="brand-title">LOGO</strong>
+          <small class="brand-subtitle">SG Detalles · Florería de barrio</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link is-active">Inicio</a></li>
+          <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <span class="header-location">
+          <span class="location-dot" aria-hidden="true">•</span>
+          <span class="location-full">Bolivia-Cochabamba · Flores de temporada</span>
+          <span class="location-short">Cbba</span>
+        </span>
+
+        <button
+          type="button"
+          id="btn-abrir-pedido-header"
+          class="btn-header-cart"
+          aria-label="Abrir resumen del pedido actual"
+        >
+          <span>Mi pedido</span>
+          <span id="contador-pedido-header" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= SECCIÓN PRINCIPAL (HERO) ================= -->
+    <section id="inicio" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow-text">FLORES CON ALMA, HECHAS A MANO</p>
+          <h1 class="hero-title">
+            Hay flores.<br />
+            Y hay formas<br />
+            de decirlo.
+          </h1>
+          <p class="hero-description">
+            Ramos que celebran lo cotidiano. Flores de temporada, elegidas con cariño en
+            nuestro pequeño taller de Cochabamba.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalogo" class="btn-dark">
+              <span>Ver catálogo</span>
+              <span class="btn-arrow" aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-illustration-frame">
+            <img
+              src="assets/.jpeg"
+              alt="SG Detalles - Ilustración floral del emprendimiento"
+              class="hero-illustration-img"
+              width="100" height="100"
+            />
+          </div>
+            <span>precio <b>34bs</b></span>          
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- ================= SECCIÓN DEL CATÁLOGO ================= -->
+    <section id="catalogo" class="catalog-section">
+      <div class="container">
+        <div class="catalog-header">
+          <div class="catalog-header-left">
+            <p class="eyebrow-text">NUESTRO CATÁLOGO</p>
+            <h2 class="section-title">Elige lo que sientes.</h2>
+          </div>
+          <p class="catalog-intro">
+            Diez formas de alegrar un día. Cada ramo se prepara a mano, con las flores más
+            bonitas de la temporada.
+          </p>
+        </div>
+
+        <div class="catalog-meta-bar">
+          <span>Rosas personalizadas &amp; detalles que duran</span>
+          <span id="catalogo-total-creaciones">10 creaciones</span>
+        </div>
+
+        <!-- Cuadrícula de productos generada dinámicamente desde js/products.js -->
+        <div id="grid-catalogo" class="catalog-grid" aria-live="polite">
+                <article class="product-card" data-product-id="prod-1"="">
+                    <div class="product-image-wrap">
+                        <img src="/assets/amarillo.jpeg" alt="Arreglo flores amarillas" class="product-image" loading="lazy" width="40" height="40">
+                    </div>
+                    <div>
+                        <h3>Ramo Primaveral</h3>
+                        <p>Flores o Rosas amarillas mas la Dedicatoria</p>
+                        <p>130</p>
+                        <button>Agregar el pedido</button>
+                    </div>
+                </article>
+        </div>
+
+        <p class="catalog-footnote">
+          Cada rosa tiene su esencia. Las variedades pueden cambiar según disponibilidad,
+          siempre manteniendo el estilo y los tonos de tu ramo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN DE CONTACTO ================= -->
+    <section id="contacto" class="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-left">
+          <p class="eyebrow-text">HABLEMOS DE FLORES</p>
+          <h2 class="section-title contact-title">
+            Tú pones el motivo.<br />
+            Nosotras, las flores.
+          </h2>
+        </div>
+
+        <div class="contact-right">
+          <p class="contact-description">
+            ¿Un cumpleaños, un gracias o porque sí? Escríbenos y te ayudamos a elegir.
+            Cuéntanos qué flores te gustan y cuándo las necesitas.
+          </p>
+          <button type="button" id="btn-contacto-whatsapp" class="btn-dark btn-whatsapp-cta">
+            <img
+              src="assets/whatsap_icon.svg"
+              alt=""
+              width="24"
+              height="124"
+              class="wa-icon-inline"
+            />
+            <span>Hacer pedido por WhatsApp</span>
+          </button>
+          <p class="contact-schedule-note">
+            Te respondemos de lunes a sábado, de 10:00 a 19:00.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand-col">
+        <div class="footer-logo">
+          <img
+            src="assets/logo.svg"
+            alt=""
+            width="28"
+            height="28"
+            class="footer-logo-icon"
+          />
+          <div>
+            <strong class="footer-logo-title">LOGO · SG DETALLES</strong>
+            <span class="footer-logo-sub">FLORERÍA VIRTUAL</span>
+          </div>
+        </div>
+        <p class="footer-about">
+          Ramos de rosas eternas y detalles personalizados hechos a mano en Cochabamba.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">CONTACTATE CONMIGO</h3>
+        <p id="footer-direccion" class="footer-text">Referencia "Fil Maxim"</p>
+        <p id="footer-horario" class="footer-text footer-muted">A coordinación</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">ESTAMOS CERCA</h3>
+        <p id="footer-telefono" class="footer-text">+591 73779628</p>
+        <p id="footer-correo" class="footer-text footer-muted">Sloveravelasco@gmail.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">SÍGUENOS</h3>
+        <ul class="footer-social-list">
+          <li>
+            <a href="https://www.instagram.com/sg_detalles___?dlrf=ZndmOXdodWR2bmZ1" class="footer-social-link">
+              <span>sg_detalles___</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.tiktok.com/@detalles.sg7?_r=1&_t=ZS-9B1BruqErVk" class="footer-social-link">
+              <span>@detalles.sg7</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        © 2026 SG Detalles · Todos los derechos reservados. By Angheli.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================= BARRA FLOTANTE RESUMEN RÁPIDO ================= -->
+  <div id="barra-pedido-flotante" class="floating-order-bar" hidden>
+    <div class="floating-order-info">
+      <span id="contador-pedido-flotante" class="floating-count">0 productos</span>
+      <span class="floating-divider">·</span>
+      <strong id="total-pedido-flotante" class="floating-total">0 Bs</strong>
+    </div>
+    <button type="button" id="btn-abrir-pedido-flotante" class="btn-floating-open">
+      Ver y personalizar pedido →
+    </button>
+  </div>
+
+  <!-- ================= NOTIFICACIÓN DISCRETA (TOAST) ================= -->
+  <div id="toast-confirmacion" class="toast-notification" role="status" aria-live="polite">
+    <span id="toast-texto">Producto agregado al pedido</span>
+    <button type="button" id="btn-toast-ver-pedido" class="btn-toast-action">
+      Ver pedido
+    </button>
+  </div>
+
+  <!-- ================= PANEL LATERAL: RESUMEN Y SOLICITUD DEL PEDIDO ================= -->
+  <div id="panel-overlay" class="panel-overlay" aria-hidden="true"></div>
+
+  <aside
+    id="panel-pedido"
+    class="order-drawer"
+    aria-labelledby="titulo-panel-pedido"
+    aria-hidden="true"
+  >
+    <div class="drawer-header">
+      <div>
+        <p class="eyebrow-text">SOLICITUD DE PEDIDO</p>
+        <h2 id="titulo-panel-pedido" class="drawer-title">Tu selección de ramos</h2>
+      </div>
+      <button
+        type="button"
+        id="btn-cerrar-panel"
+        class="btn-close-drawer"
+        aria-label="Cerrar panel de pedido"
+      >
+        ✕
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Estado cuando no hay productos -->
+      <div id="pedido-vacio-mensaje" class="empty-cart-box">
+        <p class="empty-cart-title">Tu pedido está vacío por ahora.</p>
+        <p class="empty-cart-sub">
+          Explora el catálogo y pulsa «Agregar al pedido» en los ramos que más te gusten.
+        </p>
+      </div>
+
+      <!-- Contenido activo cuando hay productos seleccionados -->
+      <div id="bloque-contenido-pedido" hidden>
+        <!-- B. Resumen de productos seleccionados -->
+        <section class="drawer-section" aria-labelledby="subtitulo-productos">
+          <div class="drawer-section-header">
+            <h3 id="subtitulo-productos" class="drawer-section-title">
+              1. Productos seleccionados
+            </h3>
+            <button type="button" id="btn-vaciar-pedido" class="btn-clear-cart">
+              Vaciar todo
+            </button>
+          </div>
+
+          <ul id="lista-items-pedido" class="cart-items-list"></ul>
+
+          <div class="cart-subtotal-bar">
+            <span>Total parcial estimado</span>
+            <strong id="pedido-total-parcial" class="cart-total-amount">0 Bs</strong>
+          </div>
+        </section>
+
+        <!-- C. Personalización del pedido (Campos opcionales) -->
+        <section class="drawer-section" aria-labelledby="subtitulo-personalizacion">
+          <h3 id="subtitulo-personalizacion" class="drawer-section-title">
+            2. Personalización del pedido <span class="optional-tag">(Opcional)</span>
+          </h3>
+
+          <div class="form-group">
+            <label for="input-dedicatoria" class="form-label">Dedicatoria</label>
+            <textarea
+              id="input-dedicatoria"
+              class="form-control"
+              rows="2"
+              maxlength="220"
+              placeholder="Ej. ¡Feliz cumpleaños, mamá! Con mucho cariño..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="input-colores" class="form-label">Colores preferidos</label>
+            <input
+              type="text"
+              id="input-colores"
+              class="form-control"
+              maxlength="120"
+              placeholder="Ej. Tonos blancos, lila suave o pastel"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="input-observaciones" class="form-label">
+              Observaciones o indicaciones especiales
+            </label>
+            <textarea
+              id="input-observaciones"
+              class="form-control"
+              rows="2"
+              maxlength="220"
+              placeholder="Ej. Envoltura en papel kraft, evitar lirios..."
+            ></textarea>
+          </div>
+        </section>
+
+        <!-- D. Datos de solicitud -->
+        <section class="drawer-section" aria-labelledby="subtitulo-datos-solicitud">
+          <h3 id="subtitulo-datos-solicitud" class="drawer-section-title">
+            3. Datos de entrega o recojo
+          </h3>
+
+          <div class="form-group">
+            <label for="input-fecha-pedido" class="form-label">
+              Fecha deseada del pedido
+            </label>
+            <input type="date" id="input-fecha-pedido" class="form-control" required />
+            <p id="error-fecha-pedido" class="form-error-msg" hidden></p>
+          </div>
+
+          <div class="form-group">
+            <span class="form-label">Modalidad preferida</span>
+            <div class="modality-options" role="radiogroup" aria-label="Modalidad del pedido">
+              <label class="radio-card">
+                <input
+                  type="radio"
+                  name="modalidad-entrega"
+                  value="Recojo en taller"
+                  checked
+                />
+                <span>Recojo Correo</span>
+              </label>
+              <label class="radio-card">
+                <input
+                  type="radio"
+                  name="modalidad-entrega"
+                  value="Entrega a domicilio"
+                />
+                <span>Entrega a domicilio</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="select-franja-horaria" class="form-label">
+              Franja horaria preferida
+            </label>
+            <select id="select-franja-horaria" class="form-control">
+              <option value="Mañana (10:00 - 13:00)">Previa coordiación</option>
+              <option value="Mediodía / Tarde (13:00 - 16:00)">
+                Mediodía / Tarde (13:00 - 16:00)
+              </option>
+              <option value="Final de la tarde (16:00 - 19:00)">
+                Final de la tarde (16:00 - 19:00)
+              </option>
+            </select>
+          </div>
+        </section>
+
+        <!-- E. Resumen de la solicitud y envío por WhatsApp -->
+        <section class="drawer-section" aria-labelledby="subtitulo-resumen-wa">
+          <h3 id="subtitulo-resumen-wa" class="drawer-section-title">
+            4. Resumen de tu solicitud
+          </h3>
+          <pre id="vista-previa-solicitud" class="whatsapp-preview-box"></pre>
+
+          <div class="order-disclaimer-box">
+            <strong>Importante:</strong> El envío por WhatsApp representa una
+            <em>solicitud de pedido</em>, no una compra confirmada ni una reserva
+            garantizada. Nuestro tienda online confirmará disponibilidad de flores,
+            personalizaciones, costo de entrega y precio final.
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <button
+        type="button"
+        id="btn-enviar-whatsapp"
+        class="btn-dark btn-send-whatsapp"
+        disabled
+      >
+        <img
+          src="assets/whatsap_icon.svg"
+          alt=""
+          width="18"
+          height="18"
+          class="wa-icon-inline"
+        />
+        <span>Enviar solicitud por WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Scripts modulares en Vanilla JavaScript -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
