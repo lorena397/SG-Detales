@@ -38,7 +38,7 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "Ramo de rosas eternas más un peluche adorabele",
     precio: 160,
     imagen: "assets/imagenes/lotso.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-2",
@@ -54,7 +54,7 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "7 rosas + 10 mariposas",
     precio: 70,
     imagen: "assets/imagenes/mariposas.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-4",
@@ -62,7 +62,7 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "Ramo de princesas. 30 rosas.",
     precio: 190,
     imagen: "assets/imagenes/princesaBlue.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-5",
@@ -70,7 +70,7 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "Ramo de princesas. 30 rosas.",
     precio: 190,
     imagen: "assets/imagenes/princesaGreen.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-6",
@@ -78,7 +78,7 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "Ramo de 80 rosas",
     precio: 470,
     imagen: "assets/imagenes/ramoBuchon.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-7",
@@ -86,7 +86,7 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "20 rosas eternas",
     precio: 120,
     imagen: "assets/imagenes/rosasYellow.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-8",
@@ -94,7 +94,7 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "7 rosas",
     precio: 50,
     imagen: "assets/imagenes/siete pink.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-9",
@@ -102,7 +102,7 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "20 mariposas",
     precio: 70,
     imagen: "assets/imagenes/mariposas1.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-10",
@@ -110,14 +110,14 @@ const CATALOGO_PRODUCTOS = [
     descripcion: "20 mariposas",
     precio: 70,
     imagen: "assets/imagenes/mariposas2.jpeg",
-    esImagenProvisional: true
+    esImagenProvisional: false
   },
   {
     id: "prod-11",
     nombre: "Sol de mi vida",
     descripcion: "7 girasoles",
     precio: 140,
-    imagen: "assets/imagenes/mariposas2.jpeg",
-    esImagenProvisional: true
+    imagen: "assets/imagenes/girasoles.jpeg",
+    esImagenProvisional: false
   }
 ];
