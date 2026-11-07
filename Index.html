@@ -23,11 +23,11 @@
     <div class="container header-inner">
       <a href="#inicio" class="brand-logo" aria-label="SG Detalles - Inicio">
         <span class="brand-icon" aria-hidden="true">
-          <img src="assets/logo.svg" alt="" width="40" height="40" />
+          <img src="assets/logo/logo.jpeg" alt="" width="40" height="40" />
         </span>
         <span class="brand-text">
           <strong class="brand-title">LOGO</strong>
-          <small class="brand-subtitle">SG Detalles · Florería de barrio</small>
+          <small class="brand-subtitle">SG Detalles · Florería Virtual</small>
         </span>
       </a>
 
@@ -159,7 +159,7 @@
               src="assets/whatsap_icon.svg"
               alt=""
               width="24"
-              height="124"
+              height="24"
               class="wa-icon-inline"
             />
             <span>Hacer pedido por WhatsApp</span>
@@ -178,7 +178,7 @@
       <div class="footer-col footer-brand-col">
         <div class="footer-logo">
           <img
-            src="assets/logo.svg"
+            src="assets/logo/logo.png"
             alt=""
             width="28"
             height="28"
@@ -314,14 +314,39 @@
           </h3>
 
           <div class="form-group">
-            <label for="input-dedicatoria" class="form-label">Dedicatoria</label>
-            <textarea
+            <label for="input-dedicatoria" class="form-label">Elige una Dedicatoria<span class="optional-tag"> +10Bs adicionales</span></label>
+            <select
               id="input-dedicatoria"
-              class="form-control"
-              rows="2"
-              maxlength="220"
-              placeholder="Ej. ¡Feliz cumpleaños, mamá! Con mucho cariño..."
-            ></textarea>
+              class="form-control">
+            <option value="feliz cumpleaños">
+              FELIZ CUMPLEAÑOS
+            </option>
+            <option value="feliz aniversario">
+              FELIZ ANIVERSARIO
+            </option>
+            <option value="quieres ser mi novia">
+              ¿QUIERES SER MI NOVIA?
+            </option>
+            <option value="para mi princesa">
+              PARA MI PRINCESA<p>&#128147;</p>
+            </option>
+            <option value="para la mas hermosa">
+              PARA LAS MAS HERMOSA
+            </option>
+            <option value="para la niña mas bonita">
+              PARA LA NIÑA MAS BONITA
+            </option>
+            <option value="feliz dia del amor">
+              FELIZ DIA DEL AMOR<p>&#128147;</p>
+            </option>
+            <option value="felelicidades mi amor">
+              FELICIDADES MI AMOR
+            </option>
+            <option value="te amo mi reyna">
+              TE AMO MI REYNA<p>&#x2665;</p>
+            </option>
+
+    </select>
           </div>
 
           <div class="form-group">
@@ -381,7 +406,7 @@
                   name="modalidad-entrega"
                   value="Entrega a domicilio"
                 />
-                <span>Entrega a domicilio</span>
+                <span>Servicio delivery</span>
               </label>
             </div>
           </div>
