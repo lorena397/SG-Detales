@@ -11,11 +11,11 @@ const CONFIG_TIENDA = {
   ciudad: "Bolivia - Cochabamba",
   // Número de WhatsApp en formato internacional sin el signo "+" ni espacios (Ej. 591 + número de 8 dígitos en Bolivia)
   // PROVISIONAL: Reemplazar con el número real del negocio
-  telefonoWhatsApp: "59170000000",
-  telefonoVisibleProvisional: "+591 72252868 (Provisional)",
-  direccionTallerProvisional: "Calle del Pez, 18 - Cbba (Provisional)",
-  horarioAtencion: "Lun–sáb · 10:00–19:00",
-  correoProvisional: "hola@casasilvestre.es (Provisional)",
+  telefonoWhatsApp: "59173779628",
+  telefonoVisibleProvisional: "+591 72252868",
+  direccionTallerProvisional: "Referncia Fil",
+  horarioAtencion: "Lun–sáb · 8:00–22:00",
+  correoProvisional: "Sloveravelasco@gmail.com",
   moneda: "Bs",
   redesSocialesProvisionales: {
     instagram: "#provisional-instagram",
@@ -34,82 +34,82 @@ const CONFIG_TIENDA = {
 const CATALOGO_PRODUCTOS = [
   {
     id: "prod-1",
-    nombre: "Brisa silvestre",
-    descripcion: "Margaritas y verdes",
-    precio: 32,
-    imagen: "assets/images/brisa-silvestre.svg",
+    nombre: "Dulce descanso",
+    descripcion: "Ramo de rosas eternas más un peluche adorabele",
+    precio: 160,
+    imagen: "assets/imagenes/lotso.jpeg",
     esImagenProvisional: true
   },
   {
     id: "prod-2",
     nombre: "Rosa de té",
-    descripcion: "Rosas de jardín",
-    precio: 45,
-    imagen: "assets/images/rosa-de-te.png",
+    descripcion: "15 carros más 10 rosas eternas",
+    precio: 450,
+    imagen: "assets/imagenes/carros.jpeg",
     esImagenProvisional: false // Fotografía real tomada del diseño de referencia
   },
   {
     id: "prod-3",
-    nombre: "Luz de abril",
-    descripcion: "Tulipanes de temporada",
-    precio: 35,
-    imagen: "assets/images/luz-de-abril.svg",
+    nombre: "Luz de abril", ////////////////
+    descripcion: "7 rosas + 10 mariposas",
+    precio: 70,
+    imagen: "assets/imagenes/mariposas.jpeg",
     esImagenProvisional: true
   },
   {
     id: "prod-4",
-    nombre: "Campo abierto",
-    descripcion: "Flores de aire campestre",
-    precio: 38,
-    imagen: "assets/images/campo-abierto.svg",
+    nombre: "Campo abierto", /////////////
+    descripcion: "Ramo de princesas. 30 rosas.",
+    precio: 190,
+    imagen: "assets/imagenes/princesaBlue.jpeg",
     esImagenProvisional: true
   },
   {
     id: "prod-5",
-    nombre: "Abrazo coral",
-    descripcion: "Rosas y ranúnculos",
-    precio: 48,
-    imagen: "assets/images/abrazo-coral.svg",
+    nombre: "Abrazo coral", //////////
+    descripcion: "Ramo de princesas. 30 rosas.",
+    precio: 190,
+    imagen: "assets/imagenes/princesaGreen.jpeg",
     esImagenProvisional: true
   },
   {
     id: "prod-6",
-    nombre: "Calma blanca",
-    descripcion: "Lisianthus y eucalipto",
-    precio: 42,
-    imagen: "assets/images/calma-blanca.svg",
+    nombre: "La dueña de mi vida",
+    descripcion: "Ramo de 80 rosas",
+    precio: 470,
+    imagen: "assets/imagenes/ramoBuchon.jpeg",
     esImagenProvisional: true
   },
   {
     id: "prod-7",
-    nombre: "Jardín lila",
-    descripcion: "Lavanda y flores malva",
-    precio: 39,
-    imagen: "assets/images/jardin-lila.svg",
+    nombre: "Siempre contigo",
+    descripcion: "20 rosas eternas",
+    precio: 120,
+    imagen: "assets/imagenes/rosasYellow.jpeg",
     esImagenProvisional: true
   },
   {
     id: "prod-8",
-    nombre: "Sol de casa",
-    descripcion: "Girasoles y verdes",
-    precio: 30,
-    imagen: "assets/images/sol-de-casa.svg",
+    nombre: "Brillo de amor",
+    descripcion: "7 rosas",
+    precio: 50,
+    imagen: "assets/imagenes/siete pink.jpeg",
     esImagenProvisional: true
   },
   {
     id: "prod-9",
-    nombre: "Pequeño jardín",
-    descripcion: "Centro en cerámica",
-    precio: 52,
-    imagen: "assets/images/pequeno-jardin.svg",
+    nombre: "Alas de amor",
+    descripcion: "20 mariposas",
+    precio: 70,
+    imagen: "assets/imagenes/mariposas1.jpeg",
     esImagenProvisional: true
   },
   {
     id: "prod-10",
-    nombre: "Siempre cerca",
-    descripcion: "Ramo de flores secas",
-    precio: 36,
-    imagen: "assets/images/siempre-cerca.svg",
+    nombre: "Alas de amor",
+    descripcion: "20 mariposas",
+    precio: 70,
+    imagen: "assets/imagenes/mariposas2.jpeg",
     esImagenProvisional: true
   }
 ];
