@@ -42,7 +42,7 @@ const CATALOGO_PRODUCTOS = [
   },
   {
     id: "prod-2",
-    nombre: "Rosa de té",
+    nombre: "Amor a toda velocidad",
     descripcion: "15 carros más 10 rosas eternas",
     precio: 450,
     imagen: "assets/imagenes/carros.jpeg",
@@ -50,7 +50,7 @@ const CATALOGO_PRODUCTOS = [
   },
   {
     id: "prod-3",
-    nombre: "Luz de abril", ////////////////
+    nombre: "Amor y Paz", ////////////////
     descripcion: "7 rosas + 10 mariposas",
     precio: 70,
     imagen: "assets/imagenes/mariposas.jpeg",
@@ -58,7 +58,7 @@ const CATALOGO_PRODUCTOS = [
   },
   {
     id: "prod-4",
-    nombre: "Campo abierto", /////////////
+    nombre: "Magia para ti I", /////////////
     descripcion: "Ramo de princesas. 30 rosas.",
     precio: 190,
     imagen: "assets/imagenes/princesaBlue.jpeg",
@@ -66,7 +66,7 @@ const CATALOGO_PRODUCTOS = [
   },
   {
     id: "prod-5",
-    nombre: "Abrazo coral", //////////
+    nombre: "Magia para ti II", //////////
     descripcion: "Ramo de princesas. 30 rosas.",
     precio: 190,
     imagen: "assets/imagenes/princesaGreen.jpeg",
@@ -98,7 +98,7 @@ const CATALOGO_PRODUCTOS = [
   },
   {
     id: "prod-9",
-    nombre: "Alas de amor",
+    nombre: "Alas de amor I",
     descripcion: "20 mariposas",
     precio: 70,
     imagen: "assets/imagenes/mariposas1.jpeg",
@@ -106,9 +106,17 @@ const CATALOGO_PRODUCTOS = [
   },
   {
     id: "prod-10",
-    nombre: "Alas de amor",
+    nombre: "Alas de amor II",
     descripcion: "20 mariposas",
     precio: 70,
+    imagen: "assets/imagenes/mariposas2.jpeg",
+    esImagenProvisional: true
+  },
+  {
+    id: "prod-11",
+    nombre: "Sol de mi vida",
+    descripcion: "7 girasoles",
+    precio: 140,
     imagen: "assets/imagenes/mariposas2.jpeg",
     esImagenProvisional: true
   }
