@@ -110,7 +110,7 @@ select {
 }
 
 .brand-icon {
-  display: none;
+  display: inline-flex;
   width: 30px;
   height: 30px;
   border-radius: 4px;
@@ -301,12 +301,15 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: var(--radius-sm);  
 }
 
 .hero-illustration-img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ==========================================================================

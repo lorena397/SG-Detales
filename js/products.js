@@ -11,7 +11,7 @@ const CONFIG_TIENDA = {
   ciudad: "Bolivia - Cochabamba",
   // Número de WhatsApp en formato internacional sin el signo "+" ni espacios (Ej. 591 + número de 8 dígitos en Bolivia)
   // PROVISIONAL: Reemplazar con el número real del negocio
-  telefonoWhatsApp: "59173779628",
+  telefonoWhatsApp: "59172252868",
   telefonoVisibleProvisional: "+591 72252868",
   direccionTallerProvisional: "Referncia Fil",
   horarioAtencion: "Lun–sáb · 8:00–22:00",
