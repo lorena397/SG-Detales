@@ -25,6 +25,19 @@ const CONFIG_TIENDA = {
 };
 
 /**
+ * Costos configurables para la sección "Detalles adicionales" por producto (en Bs).
+ * Se aplican únicamente al producto en el que fueron seleccionados:
+ * Subtotal del producto = (precio base × cantidad) + costos adicionales activos.
+ */
+const COSTO_DEDICATORIA = 10;
+const COSTO_LUCES_LED = 10;
+
+const COSTOS_ADICIONALES = {
+  dedicatoria: COSTO_DEDICATORIA,
+  lucesLed: COSTO_LUCES_LED
+};
+
+/**
  * Catálogo centralizado de productos.
  * Para cambiar una fotografía provisional por una foto real:
  * 1. Coloca la fotografía en la carpeta "assets/images/"

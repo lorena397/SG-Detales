@@ -1231,3 +1231,53 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================================================
+   DETALLES ADICIONALES POR PRODUCTO EN EL CARRITO
+   ========================================================================== */
+
+.cart-item-extras {
+  margin: 0.4rem 0 0.5rem;
+  padding: 0.45rem 0;
+  border-top: 1px dashed var(--color-border);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.cart-item-extras-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.cart-extra-group {
+  margin-bottom: 0.35rem;
+}
+
+.cart-extra-group:last-child {
+  margin-bottom: 0;
+}
+
+.cart-extra-check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.cart-extra-select {
+  margin-top: 0.25rem;
+  padding: 0.32rem 0.5rem;
+  font-size: 0.72rem;
+}
+
+.cart-item-extras-active {
+  font-size: 0.71rem;
+  font-weight: 600;
+  color: var(--color-accent-green);
+  margin-bottom: 0.4rem;
+}

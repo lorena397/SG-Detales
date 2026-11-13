@@ -189,7 +189,7 @@ function configurarEventosGlobales() {
     }
   });
 
-  // Delegación de eventos dentro de la lista de ítems del pedido (+, -, eliminar)
+  // Delegación de eventos dentro de la lista de ítems del pedido (+, -, eliminar y detalles adicionales)
   const contenedorItemsPedido = document.getElementById("lista-items-pedido");
   if (contenedorItemsPedido) {
     contenedorItemsPedido.addEventListener("click", (evento) => {
@@ -214,6 +214,31 @@ function configurarEventosGlobales() {
       renderizarCatalogo();
       actualizarInterfazPedido();
     });
+
+    contenedorItemsPedido.addEventListener("change", (evento) => {
+      const controlExtra = evento.target.closest("[data-cart-extra]");
+      if (!controlExtra) return;
+
+      const tipoExtra = controlExtra.getAttribute("data-cart-extra");
+      const productoId = controlExtra.getAttribute("data-id");
+      if (!productoId) return;
+
+      if (tipoExtra === "dedicatoria-toggle") {
+        actualizarAdicionalesProducto(productoId, {
+          incluirDedicatoria: controlExtra.checked
+        });
+      } else if (tipoExtra === "dedicatoria-select") {
+        actualizarAdicionalesProducto(productoId, {
+          dedicatoria: controlExtra.value
+        });
+      } else if (tipoExtra === "luces-led-toggle") {
+        actualizarAdicionalesProducto(productoId, {
+          lucesLed: controlExtra.checked
+        });
+      }
+
+      actualizarInterfazPedido();
+    });
   }
 
   // Botón vaciar pedido
@@ -236,7 +261,7 @@ function configurarEventosGlobales() {
   const radiosModalidad = document.querySelectorAll('input[name="modalidad-entrega"]');
 
   if (inputDedicatoria) {
-    inputDedicatoria.addEventListener("input", (e) => {
+    inputDedicatoria.addEventListener("change", (e) => {
       actualizarDatosPedido({ dedicatoria: e.target.value });
       actualizarResumenSolicitudPrevia();
     });
@@ -378,6 +403,9 @@ function actualizarInterfazPedido() {
   const totalUnidades = obtenerTotalUnidades();
   const totalParcial = obtenerTotalParcial();
   const moneda = CONFIG_TIENDA.moneda;
+  const costoDedicatoria = typeof COSTO_DEDICATORIA === "number" ? COSTO_DEDICATORIA : 10;
+  const costoLucesLed = typeof COSTO_LUCES_LED === "number" ? COSTO_LUCES_LED : 10;
+  const opcionesDedicatoria = obtenerOpcionesDedicatoriaDisponibles();
 
   // Contadores en encabezado y barra flotante
   const contadorHeader = document.getElementById("contador-pedido-header");
@@ -420,9 +448,29 @@ function actualizarInterfazPedido() {
 
     listaItemsEl.innerHTML = estadoPedido.items
       .map((item) => {
-        const subtotal = item.precio * item.cantidad;
+        const tieneDedicatoria = calcularCostoDedicatoriaProducto(item) > 0;
+        const tieneLucesLed = calcularCostoLucesLedProducto(item) > 0;
+        const costoExtrasItem = calcularCostoAdicionalesProducto(item);
+        const subtotal = calcularSubtotalProducto(item);
+        const valorDedicatoriaActual = tieneDedicatoria ? item.dedicatoria : "";
+
+        const opcionesSelectHTML = [
+          `<option value="" ${valorDedicatoriaActual === "" ? "selected" : ""}>Sin dedicatoria (0 ${moneda})</option>`,
+          ...opcionesDedicatoria.map(
+            (op) =>
+              `<option value="${op.valor}" ${
+                valorDedicatoriaActual === op.valor ? "selected" : ""
+              }>${op.texto}</option>`
+          )
+        ].join("");
+
+        const detalleExtrasTexto =
+          costoExtrasItem > 0
+            ? `<p class="cart-item-extras-active">Adicionales incluidos: +${costoExtrasItem} ${moneda}</p>`
+            : "";
+
         return `
-          <li class="cart-item">
+          <li class="cart-item" data-cart-item-id="${item.id}">
             <img src="${item.imagen}" alt="${item.nombre}" class="cart-item-img" />
             <div class="cart-item-details">
               <div class="cart-item-header">
@@ -439,6 +487,45 @@ function actualizarInterfazPedido() {
                 </button>
               </div>
               <p class="cart-item-unit-price">Precio unitario: ${item.precio} ${moneda}</p>
+
+              <div class="cart-item-extras" aria-label="Detalles adicionales para ${item.nombre}">
+                <p class="cart-item-extras-title">Detalles adicionales:</p>
+
+                <div class="cart-extra-group">
+                  <label class="cart-extra-check-label">
+                    <input
+                      type="checkbox"
+                      data-cart-extra="dedicatoria-toggle"
+                      data-id="${item.id}"
+                      ${tieneDedicatoria ? "checked" : ""}
+                    />
+                    <span>Dedicatoria <small class="optional-tag">(+${costoDedicatoria} ${moneda})</small></span>
+                  </label>
+                  <select
+                    class="form-control cart-extra-select"
+                    data-cart-extra="dedicatoria-select"
+                    data-id="${item.id}"
+                    aria-label="Seleccionar dedicatoria para ${item.nombre}"
+                  >
+                    ${opcionesSelectHTML}
+                  </select>
+                </div>
+
+                <div class="cart-extra-group">
+                  <label class="cart-extra-check-label">
+                    <input
+                      type="checkbox"
+                      data-cart-extra="luces-led-toggle"
+                      data-id="${item.id}"
+                      ${tieneLucesLed ? "checked" : ""}
+                    />
+                    <span>Luces LED adicionales <small class="optional-tag">(+${costoLucesLed} ${moneda})</small></span>
+                  </label>
+                </div>
+              </div>
+
+              ${detalleExtrasTexto}
+
               <div class="cart-item-controls-row">
                 <div class="quantity-controls" aria-label="Control de cantidad para ${item.nombre}">
                   <button
